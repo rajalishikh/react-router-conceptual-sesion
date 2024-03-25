@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Footer from "../Pages/Footer/Footer";
 
 
@@ -12,15 +12,17 @@ const Main = () => {
                 <nav>
                     <ul className="flex gap-16 m-6">
                         <li>
-                            <a className=" hover:bg-red-700 p-3" href='/'>Home</a>
+                            <Link to={'/'} className=" hover:bg-red-700 p-3" >Home</Link>
                             
                         </li>
                         <li>
-                        <a className=" hover:bg-red-700 p-3" href="/products">Products</a>
+                            <Link to={"/products"} className=" hover:bg-red-700 p-3">Products</Link>
+                       
                             
                         </li>
                         <li>
-                            <a className=" hover:bg-red-700 p-3" href="/dashboard">DashBoard</a>
+                            <Link className=" hover:bg-red-700 p-3" to={"/dashboard"}>DashBoard</Link>
+                            
                         </li>
 
                     </ul>
